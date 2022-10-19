@@ -21,15 +21,16 @@ library(ggplot2)
 
 ## Introduction and Formulated Question
 
-For this project, I chose to focus on Los Angeles City Data, specifically, 'Crime Data in LA from 2020 to present'.  This particular data set documents incidents of crime, transcribed from crime reports.  This data has been provided by the Los Angeles Police Department.  Based on this data set, the question I would like to address is:
+For this project, I chose to focus on Los Angeles City Data, specifically, 'Crime Data in LA from 2020 to present' and 'Crime Data in LA from 2010 to 2019'.  These particular data sets document incidents of crime, transcribed from crime reports.  This data has been provided by the Los Angeles Police Department.  Based on these data sets, the question I would like to address is:
 
-What types of crimes have become more prevalent within different LA counties throughout the COVID-19 pandemic?
+How has the prevalence of certain types of crimes changed in LA county since the COVID-19 pandemic?
 
 ## Methods
 
 # Reading in the data
 ```{r}
-lacrime <- data.table::fread("crimedata_2020topresent.csv")
+lacrime202022 <- data.table::fread("crimedata_2020topresent.csv")
+lacrime201019 <- data.table::fread("crime data_2010to2019.csv")
 ```
 
 
