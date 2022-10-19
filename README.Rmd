@@ -2,29 +2,37 @@
 title: "Midterm"
 author: "Kaila An"
 date: "`r Sys.Date()`"
-output: html_document
+output: github_document
+always_allow_html: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r install-libraries}
+library(tidyverse)
+library(data.table)
+library(dplyr)
+library(dtplyr)
+library(ggplot2)
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
+## Introduction and Formulated Question
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+For this project, I chose to focus on Los Angeles City Data, specifically, 'Crime Data in LA from 2020 to present'.  This particular data set documents incidents of crime, transcribed from crime reports.  This data has been provided by the Los Angeles Police Department.  Based on this data set, the question I would like to address is:
+
+What types of crimes have become more prevalent within different LA counties throughout the COVID-19 pandemic?
+
+## Methods
+
+# Reading in the data
+```{r}
+lacrime <- data.table::fread("crimedata_2020topresent.csv")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Preliminary Results
+
+## Conclusion
