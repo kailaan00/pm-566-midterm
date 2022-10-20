@@ -21,9 +21,9 @@ library(ggplot2)
 
 ## Introduction and Formulated Question
 
-For this project, I chose to focus on Los Angeles City Data, specifically, 'Crime Data in LA from 2020 to present' and 'Crime Data in LA from 2010 to 2019'.  These particular data sets document incidents of crime, transcribed from crime reports.  This data has been provided by the Los Angeles Police Department.  Based on these data sets, the question I would like to address is:
+The COVID-19 pandemic had changed the world as we knew it like no other occurrence before.  It changed people's lifestyles, their habits, and overall created a "new normal".  People's mindsets and priorities have changed so drastically, that it would be interesting to note whether or not it brought a change to criminal behavior and activity.  For this project, I chose to focus on Los Angeles City Data, specifically, 'Crime Data in LA from 2020 to present' and 'Crime Data in LA from 2010 to 2019'.  These particular data sets document incidents of crime, transcribed from crime reports.  This data has been provided by the Los Angeles Police Department.  Based on these data sets, the question I would like to address is:
 
-How has the prevalence of certain types of crimes changed in LA county since the COVID-19 pandemic?
+How has the prevalence of certain types of crimes in Los Angeles changed since the start of the COVID-19 pandemic?
 
 ## Methods
 
@@ -32,6 +32,33 @@ How has the prevalence of certain types of crimes changed in LA county since the
 lacrime202022 <- data.table::fread("crimedata_2020topresent.csv")
 lacrime201019 <- data.table::fread("crime data_2010to2019.csv")
 ```
+
+```{r}
+str(lacrime202022)
+str(lacrime201019)
+```
+
+```{r}
+table(lacrime201019$`Crm Cd Desc`)
+```
+
+```{r}
+table(lacrime202022$`Crm Cd Desc`)
+```
+
+
+```{r}
+table(lacrime201019$`Vict Sex`)
+```
+
+```{r}
+table(lacrime202022$`Vict Sex`)
+```
+
+```{r}
+table(lacrime201019$`Vict Descent`)
+```
+
 
 
 ## Preliminary Results
